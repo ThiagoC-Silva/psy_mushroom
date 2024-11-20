@@ -2,8 +2,16 @@ class Mushroom {
   const Mushroom({
     required this.id,
     required this.title,
+    required this.description,
+    required this.price,
+    required this.image,
+    required this.category,
   });
 
-  final String id;
+  final int id;
   final String title;
+  final String description;
+  final double price;
+  final String image;
+  final String category; 
 }

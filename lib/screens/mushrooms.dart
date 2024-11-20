@@ -1,6 +1,4 @@
-import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
 import 'package:flutter/material.dart';
-import 'package:psy_mushroom/data/dummy_data.dart';
 
 class MushroomsScreen extends StatelessWidget{
   const MushroomsScreen ({super.key});
@@ -13,7 +11,7 @@ class MushroomsScreen extends StatelessWidget{
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.grass),
                 label: "Mushrooms"
@@ -24,17 +22,7 @@ class MushroomsScreen extends StatelessWidget{
             ),
           ],
         ),
-        body: GridView(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 3/2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20),
-          children: [
-            //availableCategories.map((e) => CategoryGridItem(category: category)).toList()
-            for (final mushroom in availableMushrooms)
-              MushroomGridItem(mushroom: mushroom)
-          ],)
+        body: const SizedBox.expand(),
     );
   }
 }
