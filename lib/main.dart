@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:psy_mushroom/screens/mushrooms.dart';
+import 'package:psy_mushroom/screens/mushrooms_home.dart';
 
 void main() {
   runApp(const PsyMushroom());

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/models/mushroom.dart';
+import 'package:psy_mushroom/screens/mushroom_details.dart';
 
-class MushroomGridItem extends StatelessWidget{
-  const MushroomGridItem({
-    super.key,
-    required this.mushroom});
+class MushroomGridItem extends StatelessWidget {
+  const MushroomGridItem({super.key, required this.mushroom});
 
   final Mushroom mushroom;
 
@@ -12,18 +11,51 @@ class MushroomGridItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => MushroomDetailsScreen(mushroom: mushroom)));
       },
-      splashColor: Theme.of(context).primaryColor,
-      borderRadius: BorderRadius.circular(16),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: const Color.fromARGB(255, 60, 188, 23),
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.grey[200], // Fundo suave para destacar o conteúdo
         ),
-        child: Text(mushroom.title, style: Theme.of(context).textTheme.titleLarge!.copyWith(
-          color: Theme.of(context).colorScheme.onSurface,
-        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Exibe a imagem do cogumelo
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.network(
+                  mushroom.image,
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            // Exibe o título
+            Text(
+              mushroom.title,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 4),
+            // Exibe o preço
+            Text(
+              'R\$ ${mushroom.price.toStringAsFixed(2)}',
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.green,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
       ),
     );
