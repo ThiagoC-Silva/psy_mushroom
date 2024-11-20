@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:mushroom/models/mushroom.dart';
+import 'package:psy_mushroom/models/mushroom.dart';
 
 const availableMushrooms = [
   Mushroom(

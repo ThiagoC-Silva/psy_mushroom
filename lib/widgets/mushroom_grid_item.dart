@@ -1,7 +1,5 @@
-import 'package:mushroom/data/dummy_data.dart';
-//import 'package:mushroom/screens/mushroom_details.dart';
 import 'package:flutter/material.dart';
-import 'package:mushroom/models/mushroom.dart';
+import 'package:psy_mushroom/models/mushroom.dart';
 
 class MushroomGridItem extends StatelessWidget{
   const MushroomGridItem({

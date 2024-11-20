@@ -1,6 +1,6 @@
-import 'package:mushroom/widgets/mushroom_grid_item.dart';
+import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
 import 'package:flutter/material.dart';
-import 'package:mushroom/data/dummy_data.dart';
+import 'package:psy_mushroom/data/dummy_data.dart';
 
 class MushroomsScreen extends StatelessWidget{
   const MushroomsScreen ({super.key});

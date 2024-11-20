@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Mushroom {
   const Mushroom({
     required this.id,
