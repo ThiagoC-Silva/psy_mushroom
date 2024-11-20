@@ -1,6 +1,6 @@
-import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
+
 import 'package:flutter/material.dart';
-import 'package:psy_mushroom/data/dummy_data.dart';
+
 import 'package:psy_mushroom/screens/information.dart';
 
 class MushroomsScreen extends StatelessWidget{
@@ -73,18 +73,9 @@ class MushroomsScreen extends StatelessWidget{
             ),
           ],
         ),
-        body: GridView(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 3/2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20),
-
-          children: [
-            //availableCategories.map((e) => CategoryGridItem(category: category)).toList()
-            for (final mushroom in availableMushrooms)
-              MushroomGridItem(mushroom: mushroom)
-          ],)
+        body: Center(
+          child: const Text('HOME'),
+        )
     );
   }
 }
