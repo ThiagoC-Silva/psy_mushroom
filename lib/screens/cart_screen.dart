@@ -40,7 +40,6 @@ class CartScreen extends StatelessWidget {
                           trailing: IconButton(
                             icon: const Icon(Icons.remove_circle_outline),
                             onPressed: () {
-                              // Remover o item do carrinho
                               Cart.cartItems.remove(cartItem);
                               // Atualiza a tela
                               (context as Element).markNeedsBuild();

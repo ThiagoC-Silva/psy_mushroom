@@ -34,7 +34,6 @@ class InformationScreen extends StatelessWidget {
               '1. Thiago Carvalho Boquinha\n2. Samuel Loureiro Come e Dorme',
               style: TextStyle(fontSize: 18),
             ),
-            // Você pode adicionar mais informações conforme necessário
           ],
         ),
       ),

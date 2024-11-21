@@ -1,11 +1,6 @@
 import 'package:psy_mushroom/models/mushroom.dart';
+import 'package:psy_mushroom/models/cart_item.dart';
 
-class CartItem {
-  final Mushroom mushroom;
-  final double quantity;
-
-  CartItem({required this.mushroom, required this.quantity});
-}
 
 class Cart {
   static List<CartItem> cartItems = [];

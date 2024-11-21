@@ -21,10 +21,9 @@ class MushroomsScreenState extends State<MushroomsScreen> {
     setState(() {_currentIndex = index;});
 
     if (index == 0) {
-      // Se o índice for 0, navega para a tela Categories
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const Categories()),
+        MaterialPageRoute(builder: (context) => const CategoriesScreen()),
       );
     } else {
       Navigator.push(
@@ -37,7 +36,6 @@ class MushroomsScreenState extends State<MushroomsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //Sidedrwaer
       drawer: Drawer(
         child: Column(
           children: [
@@ -63,7 +61,7 @@ class MushroomsScreenState extends State<MushroomsScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: _onBottomNavTapped, // Atualiza o índice e navega para a tela desejada
+        onTap: _onBottomNavTapped,
         
         items: const [
           BottomNavigationBarItem(

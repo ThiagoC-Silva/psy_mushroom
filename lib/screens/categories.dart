@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/data/mushroom_data.dart';
 import 'package:psy_mushroom/models/mushroom.dart';
-import 'package:psy_mushroom/screens/category_details.dart';  // Importe a tela de detalhes
+import 'package:psy_mushroom/screens/category_details.dart';
 
-class Categories extends StatelessWidget {
-  const Categories({super.key});
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,6 @@ class Categories extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Navega para a tela de detalhes passando a categoria
                 Navigator.push(
                   context,
                   MaterialPageRoute(
