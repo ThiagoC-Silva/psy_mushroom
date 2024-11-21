@@ -27,7 +27,7 @@ const mushroomList = [
   ),
   Mushroom(
     id: 4,
-    title: 'Psilocybe cubensis',
+    title: 'Psilocybe Cubensis',
     description: 'Cogumelo alucinógeno contendo psilocibina, usado em práticas terapêuticas e espirituais.',
     price: 60.00,
     image: 'assets/images/psilocybe_cubensis.jpg',
@@ -35,7 +35,7 @@ const mushroomList = [
   ),
   Mushroom(
     id: 5,
-    title: 'Amanita muscaria',
+    title: 'Amanita Muscaria',
     description: 'Cogumelo psicodélico conhecido por seus efeitos visuais e introspectivos.',
     price: 50.00,
     image: 'assets/images/amanita_muscaria.jpg',

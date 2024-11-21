@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/data/mushroom_data.dart';
+import 'package:psy_mushroom/screens/cart_screen.dart';
 import 'package:psy_mushroom/screens/information.dart';
 import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
 import 'package:psy_mushroom/widgets/text_styles.dart';
@@ -25,7 +26,12 @@ class MushroomsScreenState extends State<MushroomsScreen> {
         context,
         MaterialPageRoute(builder: (context) => const Categories()),
       );
-    } else {}
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const CartScreen()),
+      );
+    }
   }
 
   @override
