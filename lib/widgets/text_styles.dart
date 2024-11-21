@@ -8,16 +8,4 @@ class TextStyles {
     fontWeight: FontWeight.normal,
     color: Colors.black,
   );
-
-  static TextStyle secondary = GoogleFonts.rockSalt(
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Colors.black,
-  );
-
-  static const TextStyle bodyText = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
-    color: Colors.grey,
-  );
 }

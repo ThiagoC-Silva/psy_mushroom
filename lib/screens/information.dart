@@ -15,15 +15,16 @@ class InformationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children:  [
             Text(
-              'Grupo PSY MUSHROOMS',
+              'Grupo PsyMushrooms',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 20),
             Text(
               'A aplicação PSY MUSHROOMS foi criada para compartilhar informações sobre cogumelos de diferentes tipos e usabilidades. Além de proporcionar a comercialização desses produtos naturais.',
               style: TextStyle(fontSize: 18),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 20),
+
             Text(
               'Membros do Grupo:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

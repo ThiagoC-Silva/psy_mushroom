@@ -1,4 +1,3 @@
-// models/cart.dart
 import 'package:psy_mushroom/models/mushroom.dart';
 
 class CartItem {

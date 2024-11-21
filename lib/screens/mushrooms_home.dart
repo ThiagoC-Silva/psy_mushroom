@@ -41,7 +41,7 @@ class MushroomsScreenState extends State<MushroomsScreen> {
       drawer: Drawer(
         child: Column(
           children: [
-            const DrawerHeader(child: Text("Psy Mushrooms")),
+            DrawerHeader(child: Text("Psy Mushrooms", style: TextStyles.primary,)),
             //Informações sobre o projeto e os integrantes
             ListTile(
               title: const Text('About'), 
@@ -64,6 +64,7 @@ class MushroomsScreenState extends State<MushroomsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onBottomNavTapped, // Atualiza o índice e navega para a tela desejada
+        
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.grass),

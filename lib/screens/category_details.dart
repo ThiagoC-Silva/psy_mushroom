@@ -36,7 +36,6 @@ class CategoryDetails extends StatelessWidget {
               child: ListTile(
                 leading: Image.asset(mushroom.image, width: 50, height: 50),
                 title: Text(mushroom.title),
-                subtitle: Text(mushroom.description),
                 trailing: Text('R\$ ${mushroom.price.toStringAsFixed(2)}'),
               ),
             ),

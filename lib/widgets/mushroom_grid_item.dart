@@ -19,11 +19,12 @@ class MushroomGridItem extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.grey[200], // Fundo suave para destacar o conteúdo
+          color: Colors.grey[200], 
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
             // Exibe a imagem do cogumelo
             Expanded(
               child: ClipRRect(
@@ -36,6 +37,7 @@ class MushroomGridItem extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
+
             // Exibe o título
             Text(
               mushroom.title,
@@ -46,6 +48,7 @@ class MushroomGridItem extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 4),
+            
             // Exibe o preço
             Text(
               'R\$ ${mushroom.price.toStringAsFixed(2)}',

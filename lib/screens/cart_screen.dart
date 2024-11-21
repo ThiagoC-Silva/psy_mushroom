@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:psy_mushroom/screens/cart.dart';
+import 'package:psy_mushroom/widgets/cart.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -15,7 +15,6 @@ class CartScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Adicionando SingleChildScrollView para permitir rolagem quando necessário
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -54,6 +53,7 @@ class CartScreen extends StatelessWidget {
                 ),
               ),
             ),
+
             // Exibe o total do carrinho
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -72,6 +72,7 @@ class CartScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
+
             ElevatedButton(
               onPressed: () {
                 // Ação para finalizar a compra
