@@ -20,12 +20,12 @@ class _MushroomDetailsScreenState extends State<MushroomDetailsScreen> {
     if (_quantityController.text.isNotEmpty) {
       double quantity = double.parse(_quantityController.text);
 
-      // Adiciona o item ao carrinho usando a classe Cart
+      // Adiciona o item ao carrinho
       setState(() {
         Cart.addToCart(widget.mushroom, quantity);
       });
 
-      // Exibe um snack bar informando que o item foi adicionado
+      // Exibe uma mensagem informando que o item foi adicionado
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('${widget.mushroom.title} adicionado ao carrinho')),
       );
@@ -37,7 +37,7 @@ class _MushroomDetailsScreenState extends State<MushroomDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: SingleChildScrollView(  // Adiciona a rolagem quando necessário
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -74,7 +74,6 @@ class _MushroomDetailsScreenState extends State<MushroomDetailsScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Campo para informar quantas gramas
               const Text(
                 "Digite a quantidade (em gramas):",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -88,7 +87,6 @@ class _MushroomDetailsScreenState extends State<MushroomDetailsScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Chama a função de adicionar ao carrinho
               ElevatedButton(
                 onPressed: addToCart, 
                 child: const Text('Adicionar ao Carrinho'),
