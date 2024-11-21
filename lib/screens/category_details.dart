@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/data/mushroom_data.dart';
 import 'package:psy_mushroom/models/mushroom.dart';
-import 'package:psy_mushroom/screens/mushroom_details.dart'; // A tela de detalhes do cogumelo
+import 'package:psy_mushroom/screens/mushroom_details.dart'; 
 
 class CategoryDetails extends StatelessWidget {
   final String category;
@@ -34,7 +34,7 @@ class CategoryDetails extends StatelessWidget {
                 );
               },
               child: ListTile(
-                leading: Image.network(mushroom.image, width: 50, height: 50),
+                leading: Image.asset(mushroom.image, width: 50, height: 50),
                 title: Text(mushroom.title),
                 subtitle: Text(mushroom.description),
                 trailing: Text('R\$ ${mushroom.price.toStringAsFixed(2)}'),

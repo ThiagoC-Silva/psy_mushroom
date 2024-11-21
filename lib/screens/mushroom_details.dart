@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/models/mushroom.dart';
+import 'package:psy_mushroom/widgets/text_styles.dart';
 
 class MushroomDetailsScreen extends StatelessWidget {
   final Mushroom mushroom;
@@ -10,15 +11,15 @@ class MushroomDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(mushroom.title),
       ),
+      
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: Image.network(
+              child: Image.asset(
                 mushroom.image,
                 height: 200,
                 fit: BoxFit.cover,
@@ -27,15 +28,12 @@ class MushroomDetailsScreen extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               mushroom.title,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyles.primary
             ),
             const SizedBox(height: 8),
             Text(
               "Categoria: ${mushroom.category}",
-              style: const TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyles.bodyText,
             ),
             const SizedBox(height: 8),
             const Text(

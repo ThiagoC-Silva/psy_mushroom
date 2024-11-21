@@ -28,7 +28,7 @@ class MushroomGridItem extends StatelessWidget {
             Expanded(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Image.network(
+                child: Image.asset(
                   mushroom.image,
                   fit: BoxFit.cover,
                   width: double.infinity,

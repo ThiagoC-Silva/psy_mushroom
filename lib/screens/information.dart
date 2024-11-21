@@ -1,81 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:psy_mushroom/screens/mushrooms.dart';
 
-class InformationScreen extends StatelessWidget{
-  const InformationScreen ({super.key});
+class InformationScreen extends StatelessWidget {
+  const InformationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About'),
+        title: const Text('About the App'),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 251, 51, 235),
-              ),
-              child: Text(
-                'Grupo',
-                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 44 ),
-              ),
+      body: const Padding(
+        padding:  EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:  [
+            Text(
+              'Grupo PSY MUSHROOMS',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            ListTile(
-              title: const Text(
-                'PsyMushrooms',
-                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 23 ),
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MushroomsScreen(
-
-                        )
-                    ),
-                );
-              },
+            SizedBox(height: 16),
+            Text(
+              'A aplicação PSY MUSHROOMS foi criada para compartilhar informações sobre cogumelos de diferentes tipos e usabilidades. Além de proporcionar a comercialização desses produtos naturais.',
+              style: TextStyle(fontSize: 18),
             ),
-            ListTile(
-              title: const Text(
-                'About',
-                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 23 ),
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const InformationScreen(
-
-                      )
-                  ),
-                );
-              },
+            SizedBox(height: 16),
+            Text(
+              'Membros do Grupo:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 8),
+            Text(
+              '1. Thiago Carvalho Boquinha\n2. Samuel Loureiro Come e Dorme',
+              style: TextStyle(fontSize: 18),
+            ),
+            // Você pode adicionar mais informações conforme necessário
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.grass),
-              label: "Mushrooms"
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_basket),
-              label: "My cart"
-          ),
-        ],
-      ),
-      body: Center(
-        child: const Text('ABOUT'),
-      ),
     );
   }
-
 }
-

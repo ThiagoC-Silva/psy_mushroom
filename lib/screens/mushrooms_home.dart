@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:psy_mushroom/data/mushroom_data.dart';
+import 'package:psy_mushroom/screens/information.dart';
 import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
-import 'categories.dart';  // Importe a tela de Categories
+import 'package:psy_mushroom/widgets/text_styles.dart';
+import 'categories.dart'; 
 
 class MushroomsScreen extends StatefulWidget {
   const MushroomsScreen({super.key});
@@ -15,9 +17,7 @@ class MushroomsScreenState extends State<MushroomsScreen> {
 
   // Função para navegar entre as telas
   void _onBottomNavTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
+    setState(() {_currentIndex = index;});
 
     if (index == 0) {
       // Se o índice for 0, navega para a tela Categories
@@ -31,8 +31,29 @@ class MushroomsScreenState extends State<MushroomsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Sidedrwaer
+      drawer: Drawer(
+        child: Column(
+          children: [
+            const DrawerHeader(child: Text("Psy Mushrooms")),
+            //Informações sobre o projeto e os integrantes
+            ListTile(
+              title: const Text('About'), 
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const InformationScreen()),
+                );
+              }
+            )
+          ],
+        ),
+      ),
+
       appBar: AppBar(
-        title: const Text('PSY MUSHROOMS'),
+        centerTitle: true,
+        title: Text('PsyMushroom', style: TextStyles.primary, textAlign: TextAlign.center,),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -48,7 +69,9 @@ class MushroomsScreenState extends State<MushroomsScreen> {
           ),
         ],
       ),
+      
       body: GridView(
+        padding: const EdgeInsets.only(top: 20),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 3 / 2,
