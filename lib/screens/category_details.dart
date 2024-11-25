@@ -17,7 +17,7 @@ class CategoryDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text('$category - Cogumelos'),
       ),
-      body: ListView.builder(
+      body: ListView.builder( // cria itens conforme o necessário
         itemCount: mushroomsInCategory.length,
         itemBuilder: (context, index) {
           Mushroom mushroom = mushroomsInCategory[index];

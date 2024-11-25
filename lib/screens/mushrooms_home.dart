@@ -4,7 +4,7 @@ import 'package:psy_mushroom/screens/cart_screen.dart';
 import 'package:psy_mushroom/screens/information.dart';
 import 'package:psy_mushroom/widgets/mushroom_grid_item.dart';
 import 'package:psy_mushroom/widgets/text_styles.dart';
-import 'categories.dart'; 
+import 'package:psy_mushroom/screens/categories.dart'; 
 
 class MushroomsScreen extends StatefulWidget {
   const MushroomsScreen({super.key});
@@ -59,6 +59,21 @@ class MushroomsScreenState extends State<MushroomsScreen> {
         centerTitle: true,
         title: Text('PsyMushroom', style: TextStyles.primary, textAlign: TextAlign.center,),
       ),
+
+      body: GridView(
+        padding: const EdgeInsets.only(top: 20),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        children: [
+          for (final mushroom in mushroomList)
+            MushroomGridItem(mushroom: mushroom),
+        ],
+      ),
+      
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onBottomNavTapped,
@@ -72,20 +87,6 @@ class MushroomsScreenState extends State<MushroomsScreen> {
             icon: Icon(Icons.shopping_basket),
             label: "My Cart",
           ),
-        ],
-      ),
-      
-      body: GridView(
-        padding: const EdgeInsets.only(top: 20),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
-        ),
-        children: [
-          for (final mushroom in mushroomList)
-            MushroomGridItem(mushroom: mushroom),
         ],
       ),
     );

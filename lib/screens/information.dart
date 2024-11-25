@@ -31,7 +31,7 @@ class InformationScreen extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              '1. Thiago Carvalho Boquinha\n2. Samuel Loureiro Come e Dorme',
+              '1. Thiago Carvalho Boquinha\n2. Samuel Loureiro Joga Come Dorme',
               style: TextStyle(fontSize: 18),
             ),
           ],

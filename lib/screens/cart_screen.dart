@@ -27,6 +27,7 @@ class CartScreen extends StatelessWidget {
                           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                       ),
+                      
                     // Exibe os itens do carrinho se houver
                     ...Cart.cartItems.map((cartItem) {
                       double totalItemPrice = cartItem.mushroom.price * cartItem.quantity;

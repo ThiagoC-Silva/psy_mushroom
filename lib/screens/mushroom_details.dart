@@ -37,7 +37,7 @@ class _MushroomDetailsScreenState extends State<MushroomDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView(// Não quebrar a tela
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(

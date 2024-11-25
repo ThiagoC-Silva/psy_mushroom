@@ -26,12 +26,12 @@ class MushroomGridItem extends StatelessWidget {
           children: [
 
             // Exibe a imagem do cogumelo
-            Expanded(
-              child: ClipRRect(
+            Expanded(// Ocupar todo o espaço disponível do widget
+              child: ClipRRect(// Arredonda as bordas da imagem cortando-as
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
                   mushroom.image,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.cover,// Como a imagem se comporta no widget
                   width: double.infinity,
                 ),
               ),

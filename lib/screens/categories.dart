@@ -8,10 +8,12 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Dicionário
     Map<String, List<Mushroom>> categorizedMushrooms = {};
 
     // Organiza os cogumelos por categoria
     for (var mushroom in mushroomList) {
+      //Verifica a existência da chave
       if (!categorizedMushrooms.containsKey(mushroom.category)) {
         categorizedMushrooms[mushroom.category] = [];
       }
